@@ -5,6 +5,9 @@
 # Python Virtual Environment
 .venv
 
+# Local DB
+.db
+
 # Byte-compiled
 __pycache__/
 
