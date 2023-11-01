@@ -1,0 +1,16 @@
+# Project
+.vscode
+.DS_Store
+
+# Python Virtual Environment
+.venv
+
+# Byte-compiled
+__pycache__/
+
+# Test & Code Quality
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
