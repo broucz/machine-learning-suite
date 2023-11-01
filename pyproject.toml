@@ -1,0 +1,28 @@
+[metadata]
+description-file = "README.md"
+
+[tool.black]
+# https://github.com/psf/black
+line-length = 120
+exclude = "(.git|.pytest_cache|.ruff_cache|.venv|__pycache__)"
+
+[tool.ruff]
+line-length = 120
+select = [
+    "E", "W",   # see: https://pypi.org/project/pycodestyle
+    "F",        # see: https://pypi.org/project/pyflakes
+    "N",        # see: https://pypi.org/project/pep8-naming
+]
+ignore = []
+exclude = [
+    ".git",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__"
+]
+fixable = []
+unfixable = ["F401"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
