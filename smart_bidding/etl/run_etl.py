@@ -5,7 +5,7 @@ import os
 import time
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from datetime import datetime
-from typing import Dict
+from typing import Dict, List, Tuple
 
 from shared.utils import ClickHouseDbClient, date, db_ops, log, storage_ops, validators
 
@@ -18,7 +18,10 @@ SQL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sql")
 
 
 def submit_futures(
-    executor: ThreadPoolExecutor, query: str, args: argparse.Namespace
+    executor: ThreadPoolExecutor,
+    query: str,
+    hour_intervals: List[Tuple[datetime, datetime]],
+    down_sampling_percentage: float,
 ) -> Dict[Future, Dict[str, datetime]]:
     """
     Submit tasks to the ThreadPoolExecutor.
@@ -26,7 +29,8 @@ def submit_futures(
     Args:
         executor: The ThreadPoolExecutor object.
         query: The SQL query string.
-        args: Command line arguments.
+        hour_intervals: List of hourly intervals to process.
+        down_sampling_percentage: Down sampling to apply.
 
     Returns:
         Dictionary of futures along with associated metadata.
@@ -38,7 +42,7 @@ def submit_futures(
         params = {
             "start_time": start_time,
             "end_time": end_time,
-            "down_sampling_percentage": args.down_sampling_percentage,
+            "down_sampling_percentage": down_sampling_percentage,
         }
         client = ClickHouseDbClient().get_client()
         future = executor.submit(db_ops.execute_query_to_dask_df, client, query, params)
@@ -63,7 +67,7 @@ def process_future_results(futures: Dict[Future, Dict[str, datetime]], storage: 
             try:
                 storage.write_dask_df(dd, file_path)
             except Exception as e:
-                raise db_ops.DiskWriteError(f"Failed to write to disk: {e}")
+                raise storage_ops.StorageWriteError(f"Failed to write: {e}")
         except Exception as e:
             raise db_ops.QueryExecutionError(f"An exception occurred for {metadata['start_time']}: {e}")
 
@@ -81,14 +85,17 @@ def main(args: argparse.Namespace) -> None:
     if args.storage_type == "local":
         storage = storage_ops.LocalStorage(root_dir=LOCAL_DATASET_DIR)
     else:
-        raise Exception("S3Storage not implemented")
+        raise Exception("Remote storage not implemented")
         # storage = storage_ops.S3Storage(bucket_name="my-bucket")
 
-    query = db_ops.read_query_from_file(os.path.join(SQL_DIR, "extract_events.sql"))
     execution_start_time = time.time()
 
+    query = db_ops.read_query_from_file(os.path.join(SQL_DIR, "extract_events.sql"))
+    hour_intervals = date.get_hour_intervals(args.start_date, args.end_date)
+    down_sampling_percentage = args.down_sampling_percentage
+
     with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
-        futures = submit_futures(executor, query, args)
+        futures = submit_futures(executor, query, hour_intervals, down_sampling_percentage)
         process_future_results(futures, storage)
 
     execution_time = time.time() - execution_start_time

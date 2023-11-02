@@ -42,16 +42,6 @@ class DbClient(ABC):
         pass
 
 
-class DiskWriteError(Exception):
-    """Custom exception to indicate errors during disk write operations.
-
-    Raised when an attempt to write data to disk fails, allowing for
-    more specific error handling related to disk operations.
-    """
-
-    pass
-
-
 class QueryExecutionError(Exception):
     """Custom exception to indicate errors during query execution.
 

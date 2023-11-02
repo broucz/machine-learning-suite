@@ -19,6 +19,16 @@ class AbstractStorage(ABC):
         pass
 
 
+class StorageWriteError(Exception):
+    """Custom exception to indicate errors during write operations.
+
+    Raised when an attempt to write data fails, allowing for
+    more specific error handling related to storage operations.
+    """
+
+    pass
+
+
 class LocalStorage(AbstractStorage):
     def __init__(self, root_dir: str):
         """
