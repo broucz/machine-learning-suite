@@ -7,17 +7,14 @@ from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 from datetime import datetime
 from typing import Dict
 
-from shared.utils import ClickHouseDbClient, date, db_ops, log, validators
+from shared.utils import ClickHouseDbClient, date, db_ops, log, storage_ops, validators
 
 # Module Config
 logger = log.get_logger()
 NAMESPACE = "smart_bidding"
 DB_DIR = os.path.join(os.getcwd(), ".db", NAMESPACE)
-RAW_DATASET_DIR = os.path.join(DB_DIR, "raw_dataset")
+LOCAL_DATASET_DIR = os.path.join(DB_DIR, "dataset")
 SQL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sql")
-
-os.makedirs(DB_DIR, exist_ok=True)
-os.makedirs(RAW_DATASET_DIR, exist_ok=True)
 
 
 def submit_futures(
@@ -38,34 +35,33 @@ def submit_futures(
     futures = {}
     hour_intervals = date.get_hour_intervals(args.start_date, args.end_date)
     for start_time, end_time in hour_intervals:
-        destination_folder = os.path.join(RAW_DATASET_DIR, f"{start_time.strftime('%Y-%m-%d_%H')}")
-        if not os.path.exists(destination_folder):
-            params = {
-                "start_time": start_time,
-                "end_time": end_time,
-                "down_sampling_percentage": args.down_sampling_percentage,
-            }
-            client = ClickHouseDbClient().get_client()
-            future = executor.submit(db_ops.execute_query_to_dask_df, client, query, params)
-            futures[future] = {"start_time": start_time}
+        params = {
+            "start_time": start_time,
+            "end_time": end_time,
+            "down_sampling_percentage": args.down_sampling_percentage,
+        }
+        client = ClickHouseDbClient().get_client()
+        future = executor.submit(db_ops.execute_query_to_dask_df, client, query, params)
+        futures[future] = {"start_time": start_time}
     return futures
 
 
-def process_future_results(futures: Dict[Future, Dict[str, datetime]]) -> None:
+def process_future_results(futures: Dict[Future, Dict[str, datetime]], storage: storage_ops.AbstractStorage) -> None:
     """
     Process the results of completed futures.
 
     Args:
         futures: Dictionary of futures along with associated metadata.
+        storage: The storage class to use for writing down the result.
     """
 
     for future in as_completed(futures):
         metadata = futures[future]
         try:
-            dask_df = future.result()
-            destination_folder = os.path.join(RAW_DATASET_DIR, f"{metadata['start_time'].strftime('%Y-%m-%d_%H')}")
+            dd = future.result()
+            file_path = f"{metadata['start_time'].strftime('%Y-%m-%d_%H')}"
             try:
-                dask_df.to_parquet(destination_folder)
+                storage.write_dask_df(dd, file_path)
             except Exception as e:
                 raise db_ops.DiskWriteError(f"Failed to write to disk: {e}")
         except Exception as e:
@@ -81,12 +77,19 @@ def main(args: argparse.Namespace) -> None:
     """
 
     logger.info("Extracting events")
+
+    if args.storage_type == "local":
+        storage = storage_ops.LocalStorage(root_dir=LOCAL_DATASET_DIR)
+    else:
+        raise Exception("S3Storage not implemented")
+        # storage = storage_ops.S3Storage(bucket_name="my-bucket")
+
     query = db_ops.read_query_from_file(os.path.join(SQL_DIR, "extract_events.sql"))
     execution_start_time = time.time()
 
     with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
         futures = submit_futures(executor, query, args)
-        process_future_results(futures)
+        process_future_results(futures, storage)
 
     execution_time = time.time() - execution_start_time
     logger.info(f"Execution time: {round(execution_time, 3)} seconds")
