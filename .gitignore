@@ -3,7 +3,10 @@
 .DS_Store
 
 # Python Virtual Environment
-.venv
+.venv/
+
+# Local DB
+.db
 
 # Byte-compiled
 __pycache__/
