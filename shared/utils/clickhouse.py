@@ -4,10 +4,10 @@ from typing import Optional
 import clickhouse_connect
 from clickhouse_connect.driver.client import Client
 
-from .db_ops import DbClient
+from .db_ops import AbstractDbClient
 
 
-class ClickHouseDbClient(DbClient):
+class ClickHouseDbClient(AbstractDbClient):
     """ClickHouse database client that abstracts the creation of a ClickHouse connection
     and falls back on environment variables or default values if specific configurations
     are not provided.

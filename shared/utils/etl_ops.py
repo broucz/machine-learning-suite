@@ -1,7 +1,19 @@
+from argparse import Namespace
 from abc import ABC, abstractmethod
+from concurrent.futures import Future, ThreadPoolExecutor
 from logging import Logger
+from typing import Any, Dict, Set, Tuple
 import dask.dataframe as dd
-from typing import Dict, Tuple, Set
+
+
+class TransformError(Exception):
+    """Custom exception to indicate errors during the ETL transform process.
+
+    Raised when a transformation on a dataset fails during the ETL process,
+    allowing for more specific error handling related to data transformations.
+    """
+
+    ...
 
 
 class AbstractDictionary(ABC):
@@ -74,6 +86,61 @@ class AbstractTransformer(ABC):
 
         Returns:
             The transformed Dask dataframe.
+
+        Raises:
+            NotImplementedError: If the method is not implemented in the derived class.
+        """
+        raise NotImplementedError("Subclasses must implement this method")
+
+
+class AbstractProcessor(ABC):
+    """Abstract base class for data processors that defines the standard ETL operations.
+
+    Derived classes should implement the methods `_submit_futures` and `_process_future_results`
+    to execute the ETL process using a multi-threaded approach.
+    """
+
+    def __init__(self, args: Namespace, logger: Logger):
+        """Initializes the AbstractProcessor with command line arguments and a logger.
+
+        Args:
+            args: Command line arguments that provide configuration settings.
+            logger: A logging object to record the process's progress.
+        """
+        self.args = args
+        self.logger = logger
+
+    @abstractmethod
+    def _submit_futures(self, executor: ThreadPoolExecutor) -> Dict[Future, Dict[str, Any]]:
+        """Submits tasks to the executor and returns a dictionary of futures with associated metadata.
+
+        Args:
+            executor: The ThreadPoolExecutor object used for submitting tasks.
+
+        Returns:
+            A dictionary where keys are `Future` objects and values are metadata dictionaries.
+
+        Raises:
+            NotImplementedError: If the method is not implemented in the derived class.
+        """
+        raise NotImplementedError("Subclasses must implement this method")
+
+    @abstractmethod
+    def _process_future_results(self, futures: Dict[Future, Dict[str, Any]]) -> None:
+        """Processes the results of the completed futures and handles exceptions.
+
+        Args:
+            futures: A dictionary of futures with associated metadata.
+
+        Raises:
+            NotImplementedError: If the method is not implemented in the derived class.
+        """
+        raise NotImplementedError("Subclasses must implement this method")
+
+    @abstractmethod
+    def run(self) -> None:
+        """The main method to execute the processor's tasks, typically invoking the submission of
+        futures and processing of results.
 
         Raises:
             NotImplementedError: If the method is not implemented in the derived class.

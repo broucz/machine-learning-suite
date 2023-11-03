@@ -24,7 +24,7 @@ class SupportsQueryDFStream(Protocol):
         raise NotImplementedError("Subclasses must implement this method")
 
 
-class DbClient(ABC):
+class AbstractDbClient(ABC):
     """Abstract Base Class for database client classes.
 
     This class defines the interface for database clients.

@@ -1,6 +1,6 @@
 import json
 import os
-from shared.utils.transform_ops import AbstractDictionary
+from shared.utils.etl_ops import AbstractDictionary
 from typing import Dict, Tuple
 
 

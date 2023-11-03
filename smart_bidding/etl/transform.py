@@ -2,7 +2,7 @@ from logging import Logger
 from typing import Set
 
 import dask.dataframe as dd
-from shared.utils.transform_ops import AbstractDictionary, AbstractTransformer
+from shared.utils.etl_ops import AbstractDictionary, AbstractTransformer
 
 
 class Transformer(AbstractTransformer):
