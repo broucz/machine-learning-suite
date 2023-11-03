@@ -8,8 +8,9 @@ from .db_ops import DbClient
 
 
 class ClickHouseDbClient(DbClient):
-    """
-    ClickHouse database client that implements the DbClient interface.
+    """ClickHouse database client that abstracts the creation of a ClickHouse connection
+    and falls back on environment variables or default values if specific configurations
+    are not provided.
     """
 
     DEFAULT_HOST = "chp.ovh.0x3e.net"
@@ -17,17 +18,16 @@ class ClickHouseDbClient(DbClient):
     DEFAULT_USER = "generic-raw"
 
     def get_client(self, host: Optional[str] = None, port: Optional[str] = None, user: Optional[str] = None) -> Client:
-        """
-        Returns a ClickHouse client using the provided configurations or default
+        """Returns a ClickHouse client using the provided configurations or
         environment variables if not provided.
 
         Args:
-            host (Optional[str]): The host address for ClickHouse.
-            port (Optional[str]): The port for ClickHouse.
-            user (Optional[str]): The user for ClickHouse.
+            host: The host address for ClickHouse.
+            port: The port for ClickHouse.
+            user: The user for ClickHouse.
 
         Returns:
-            Client: An instance of the ClickHouse client.
+            An instance of the ClickHouse client.
         """
 
         host = host or os.environ.get("CH_HOST", self.DEFAULT_HOST)

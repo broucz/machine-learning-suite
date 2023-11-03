@@ -17,9 +17,11 @@ class SupportsQueryDFStream(Protocol):
 
         Returns:
             An iterable containing DataFrames.
-        """
 
-        pass
+        Raises:
+            NotImplementedError: If the method is not implemented in the derived class.
+        """
+        raise NotImplementedError("Subclasses must implement this method")
 
 
 class DbClient(ABC):
@@ -37,9 +39,11 @@ class DbClient(ABC):
 
         Returns:
             A database client object that supports query_df_stream method.
-        """
 
-        pass
+        Raises:
+            NotImplementedError: If the method is not implemented in the derived class.
+        """
+        raise NotImplementedError("Subclasses must implement this method")
 
 
 class QueryExecutionError(Exception):
@@ -49,7 +53,7 @@ class QueryExecutionError(Exception):
     more specific error handling related to database queries.
     """
 
-    pass
+    ...
 
 
 def execute_query_to_dask_df(
@@ -58,17 +62,16 @@ def execute_query_to_dask_df(
     params: Optional[Dict[str, Union[str, int, float]]] = None,
     npartitions: int = 1,
 ) -> dd.DataFrame:
-    """
-    Execute a query and append the result to a Dask DataFrame.
+    """Execute a query and append the result to a Dask DataFrame.
 
     Args:
-        client (SupportsQueryDFStream): A database client class implementing the SupportsQueryDFStream protocol.
-        query (str): SQL query as a string.
-        params (Dict[str, Union[str, int, float]], optional): Parameters to format the query.
-        npartitions (int, optional): Number of partitions for the Dask DataFrame.
+        client: A database client class implementing the SupportsQueryDFStream protocol.
+        query: SQL query as a string.
+        params: Parameters to format the query.
+        npartitions: Number of partitions for the Dask DataFrame.
 
     Returns:
-        dd.DataFrame: The DataFrame with the query results.
+        The DataFrame with the query results.
 
     Raises:
         QueryExecutionError: If an error occurs while executing the query.
@@ -98,14 +101,13 @@ def execute_query_to_dask_df(
 
 
 def read_query_from_file(path: str) -> str:
-    """
-    Read SQL query from a file.
+    """Read SQL query from a file.
 
     Args:
-        path (str): Path to the SQL query file.
+        path: Path to the SQL query file.
 
     Returns:
-        str: SQL query as a string.
+        SQL query as a string.
 
     Raises:
         FileNotFoundError: If the specified file is not found.

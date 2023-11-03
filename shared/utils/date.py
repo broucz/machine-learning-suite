@@ -6,15 +6,14 @@ START_OF_DAY = (0, 0, 0)
 
 
 def get_date_range_for_past_days(days: int, current_time: datetime = datetime.now()) -> Tuple[datetime, datetime]:
-    """
-    Generate a date range for the past specified number of days, inclusive.
+    """Generate a date range for the past specified number of days, inclusive.
 
     Args:
-        days (int): Number of past days to generate the date range for.
-        current_time (datetime): The current time, useful for testing. Defaults to datetime.now().
+        days: Number of past days to generate the date range for.
+        current_time: The current time, useful for testing. Defaults to datetime.now().
 
     Returns:
-        Tuple[datetime, datetime]: Start and end datetime objects for the date range.
+        Start and end datetime objects for the date range.
     """
 
     end_date = datetime(current_time.year, current_time.month, current_time.day, *END_OF_DAY) - timedelta(days=1)
@@ -25,15 +24,14 @@ def get_date_range_for_past_days(days: int, current_time: datetime = datetime.no
 
 
 def get_hour_intervals(start_date: datetime, end_date: datetime) -> List[Tuple[datetime, datetime]]:
-    """
-    Generate a list of hourly intervals between two dates.
+    """Generate a list of hourly intervals between two dates.
 
     Args:
-        start_date (datetime): The start date and time.
-        end_date (datetime): The end date and time.
+        start_date: The start date and time.
+        end_date: The end date and time.
 
     Returns:
-        List[Tuple[datetime, datetime]]: A list of tuples, each containing the start and end of an hourly interval.
+        A list of tuples, each containing the start and end of an hourly interval.
 
     Raises:
         ValueError: If end_date is before start_date or if any date is None.

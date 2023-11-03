@@ -30,8 +30,7 @@ def submit_futures(
     hour_intervals: List[Tuple[datetime, datetime]],
     down_sampling_percentage: float,
 ) -> Dict[Future, Dict[str, datetime]]:
-    """
-    Submit tasks to the ThreadPoolExecutor.
+    """Submit tasks to the ThreadPoolExecutor.
 
     Args:
         executor: The ThreadPoolExecutor object.
@@ -60,8 +59,7 @@ def submit_futures(
 def process_future_results(
     futures: Dict[Future, Dict[str, datetime]], transformer: AbstractTransformer, storage: AbstractStorage
 ) -> None:
-    """
-    Process the results of completed futures.
+    """Process the results of completed futures.
 
     Args:
         futures: Dictionary of futures along with associated metadata.
@@ -84,8 +82,7 @@ def process_future_results(
 
 
 def main(args: argparse.Namespace) -> None:
-    """
-    Main function to orchestrate the ETL process.
+    """Main function to orchestrate the ETL process.
 
     Args:
         args: Command line arguments.

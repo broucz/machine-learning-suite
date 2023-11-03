@@ -7,15 +7,14 @@ DEFAULT_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 
 def get_logger(name: str = __name__, level: int = DEFAULT_LOG_LEVEL) -> Logger:
-    """
-    Configures and returns a logger with the specified name and level.
+    """Configures and returns a logger with the specified name and level.
 
     Args:
-        name (str, optional): The name of the logger. Defaults to the name of the current module (`__name__`).
-        level (int, optional): The logging level. Defaults to logging.INFO.
+        name: The name of the logger. Defaults to the name of the current module (`__name__`).
+        level: The logging level. Defaults to logging.INFO.
 
     Returns:
-        Logger: A Logger instance configured with the specified name and settings.
+        A Logger instance configured with the specified name and settings.
     """
     logger = logging.getLogger(name)
 

@@ -8,15 +8,21 @@ import dask.dataframe as dd
 class AbstractStorage(ABC):
     @abstractmethod
     def read_dask_df(self, file_paths: List[str]) -> dd.DataFrame:
-        """Read data from multiple file paths into a Dask DataFrame."""
+        """Read data from multiple file paths into a Dask DataFrame.
 
-        pass
+        Raises:
+            NotImplementedError: If the method is not implemented in the derived class.
+        """
+        raise NotImplementedError("Subclasses must implement this method")
 
     @abstractmethod
     def write_dask_df(self, df: dd.DataFrame, file_path: str) -> None:
-        """Write a Dask DataFrame to a given file path."""
+        """Write a Dask DataFrame to a given file path.
 
-        pass
+        Raises:
+            NotImplementedError: If the method is not implemented in the derived class.
+        """
+        raise NotImplementedError("Subclasses must implement this method")
 
 
 class StorageWriteError(Exception):
@@ -26,16 +32,15 @@ class StorageWriteError(Exception):
     more specific error handling related to storage operations.
     """
 
-    pass
+    ...
 
 
 class LocalStorage(AbstractStorage):
     def __init__(self, root_dir: str):
-        """
-        Initialize the LocalStorage with a given root directory.
+        """Initialize the LocalStorage with a given root directory.
 
         Args:
-            root_dir (str): The path to the root directory to use.
+            root_dir: The path to the root directory to use.
         """
 
         self.root_dir = root_dir
@@ -62,11 +67,10 @@ class LocalStorage(AbstractStorage):
 
 class S3Storage(AbstractStorage):
     def __init__(self, bucket_name: str):
-        """
-        Initialize the S3Storage with a given bucket name.
+        """Initialize the S3Storage with a given bucket name.
 
         Args:
-            bucket_name (str): Name of the S3 bucket to use.
+            bucket_name: Name of the S3 bucket to use.
         """
 
         self.bucket_name = bucket_name
