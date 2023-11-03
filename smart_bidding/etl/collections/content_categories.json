@@ -1,0 +1,275 @@
+[
+  {
+    "id": 2,
+    "name": "Adult",
+    "long_name": "Adult",
+    "parent": 0,
+    "selectable": 0
+  },
+  {
+    "id": 97,
+    "name": "Amateur",
+    "long_name": "Adult - Amateur",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 98,
+    "name": "Anal",
+    "long_name": "Adult - Anal",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 99,
+    "name": "Asian",
+    "long_name": "Adult - Asian",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 102,
+    "name": "BBW",
+    "long_name": "Adult - BBW",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 108,
+    "name": "BDSM",
+    "long_name": "Adult - BDSM",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 104,
+    "name": "Big Tits",
+    "long_name": "Adult - Big Tits",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 105,
+    "name": "Bisexual",
+    "long_name": "Adult - Bisexual",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 107,
+    "name": "Blowjobs",
+    "long_name": "Adult - Blowjobs",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 110,
+    "name": "Cartoons/Hentai",
+    "long_name": "Adult - Cartoons/Hentai",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 478,
+    "name": "Celebrities/Gossip",
+    "long_name": "Entertainment &amp; Lifestyle - Celebrities/Gossip",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 492,
+    "name": "Dating",
+    "long_name": "Entertainment &amp; Lifestyle - Dating",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 115,
+    "name": "Ebony",
+    "long_name": "Adult - Ebony",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 472,
+    "name": "Entertainment &amp; Lifestyle",
+    "long_name": "Entertainment &amp; Lifestyle",
+    "parent": 0,
+    "selectable": 0
+  },
+  {
+    "id": 506,
+    "name": "Erotic/Sexy",
+    "long_name": "Entertainment &amp; Lifestyle - Erotic/Sexy",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 498,
+    "name": "File Hosting",
+    "long_name": "Entertainment &amp; Lifestyle - File Hosting",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 117,
+    "name": "Foot Fetish",
+    "long_name": "Adult - Foot Fetish",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 502,
+    "name": "Games",
+    "long_name": "Entertainment &amp; Lifestyle - Games",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 118,
+    "name": "Gay",
+    "long_name": "Adult - Gay",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 508,
+    "name": "General",
+    "long_name": "Adult - General",
+    "parent": 2,
+    "selectable": 0
+  },
+  {
+    "id": 511,
+    "name": "General",
+    "long_name": "Entertainment &amp; Lifestyle - General",
+    "parent": 472,
+    "selectable": 0
+  },
+  {
+    "id": 130,
+    "name": "Grannies",
+    "long_name": "Adult - Grannies",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 476,
+    "name": "Humour",
+    "long_name": "Entertainment &amp; Lifestyle - Humour",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 510,
+    "name": "Japanese",
+    "long_name": "Adult - Japanese",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 125,
+    "name": "Latina",
+    "long_name": "Adult - Latina",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 126,
+    "name": "Lesbians",
+    "long_name": "Adult - Lesbians",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 517,
+    "name": "Manga &amp; Anime",
+    "long_name": "Manga &amp; Anime",
+    "parent": 0,
+    "selectable": 0
+  },
+  {
+    "id": 129,
+    "name": "MILF",
+    "long_name": "Adult - MILF",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 474,
+    "name": "Music/Movies",
+    "long_name": "Entertainment &amp; Lifestyle - Music/Movies",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 504,
+    "name": "Online Communities",
+    "long_name": "Entertainment &amp; Lifestyle - Online Communities",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 137,
+    "name": "Squirting",
+    "long_name": "Adult - Squirting",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 496,
+    "name": "Streaming",
+    "long_name": "Entertainment &amp; Lifestyle - Streaming",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 490,
+    "name": "Tech/Business News",
+    "long_name": "Entertainment &amp; Lifestyle - Tech/Business News",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 139,
+    "name": "Teens (18+)",
+    "long_name": "Adult - Teens (18+)",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 500,
+    "name": "Torrents",
+    "long_name": "Entertainment &amp; Lifestyle - Torrents",
+    "parent": 472,
+    "selectable": 1
+  },
+  {
+    "id": 142,
+    "name": "Transexual/Shemale",
+    "long_name": "Adult - Transexual/Shemale",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 515,
+    "name": "Virtual Reality",
+    "long_name": "Adult - Virtual Reality",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 143,
+    "name": "Voyeur",
+    "long_name": "Adult - Voyeur",
+    "parent": 2,
+    "selectable": 1
+  },
+  {
+    "id": 524,
+    "name": "Webcams",
+    "long_name": "Adult - Webcams",
+    "parent": 2,
+    "selectable": 1
+  }
+]

@@ -3,7 +3,7 @@
 .DS_Store
 
 # Python Virtual Environment
-.venv
+.venv/
 
 # Local DB
 .db

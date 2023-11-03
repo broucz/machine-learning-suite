@@ -1,0 +1,530 @@
+[
+  {
+    "id": 51,
+    "name": "Acer",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 40,
+    "name": "Alcatel",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Apple",
+    "device_type": {
+      "id": 4,
+      "name": "Smart TV"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Archos",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 29,
+    "name": "ASUS",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 69,
+    "name": "ASUS",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 30,
+    "name": "BenQ",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 13,
+    "name": "BlackBerry",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 25,
+    "name": "BlackBerry",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 50,
+    "name": "Casio",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Dell",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Fujitsu",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Galaxy Nexus 10",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 0,
+    "name": "Generic",
+    "device_type": {
+      "id": 1,
+      "name": "Desktop"
+    }
+  },
+  {
+    "id": 56,
+    "name": "Generic",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 78,
+    "name": "Generic",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 79,
+    "name": "Generic",
+    "device_type": {
+      "id": 4,
+      "name": "Smart TV"
+    }
+  },
+  {
+    "id": 80,
+    "name": "Generic",
+    "device_type": {
+      "id": 6,
+      "name": "Console"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Google",
+    "device_type": {
+      "id": 4,
+      "name": "Smart TV"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Google Glass",
+    "device_type": {
+      "id": 5,
+      "name": "Wearable Devices"
+    }
+  },
+  {
+    "id": 37,
+    "name": "HbbTV",
+    "device_type": {
+      "id": 4,
+      "name": "Smart TV"
+    }
+  },
+  {
+    "id": 46,
+    "name": "Hisense",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 32,
+    "name": "HP",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 19,
+    "name": "HTC",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Huawei",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 53,
+    "name": "Huawei",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 2,
+    "name": "iPad",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 1,
+    "name": "iPhone",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 3,
+    "name": "iPod",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 48,
+    "name": "KDDI",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Kindle",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Kobo",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 47,
+    "name": "KT Tech",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 41,
+    "name": "Lenovo",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Lenovo",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 15,
+    "name": "LG",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 71,
+    "name": "LG",
+    "device_type": {
+      "id": 4,
+      "name": "Smart TV"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Micromax",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 68,
+    "name": "Microsoft",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Motorola",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 54,
+    "name": "Motorola",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 23,
+    "name": "NEC",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Nintendo",
+    "device_type": {
+      "id": 6,
+      "name": "Console"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Nokia",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 76,
+    "name": "Oppo",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Panasonic",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Philips",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Philips",
+    "device_type": {
+      "id": 4,
+      "name": "Smart TV"
+    }
+  },
+  {
+    "id": 6,
+    "name": "PlayStation",
+    "device_type": {
+      "id": 6,
+      "name": "Console"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Roku",
+    "device_type": {
+      "id": 4,
+      "name": "Smart TV"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Sagem",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Samsung",
+    "device_type": {
+      "id": 4,
+      "name": "Smart TV"
+    }
+  },
+  {
+    "id": 43,
+    "name": "Samsung",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 57,
+    "name": "Samsung",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Sanyo",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Sharp",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Siemens",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 77,
+    "name": "SmartWatch",
+    "device_type": {
+      "id": 5,
+      "name": "Wearable Devices"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Sony",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Sony",
+    "device_type": {
+      "id": 4,
+      "name": "Smart TV"
+    }
+  },
+  {
+    "id": 55,
+    "name": "Sony",
+    "device_type": {
+      "id": 3,
+      "name": "Tablet"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Toshiba",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 72,
+    "name": "Vivo",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Xbox",
+    "device_type": {
+      "id": 6,
+      "name": "Console"
+    }
+  },
+  {
+    "id": 66,
+    "name": "Xiaomi",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  },
+  {
+    "id": 49,
+    "name": "ZTE",
+    "device_type": {
+      "id": 2,
+      "name": "Mobile"
+    }
+  }
+]

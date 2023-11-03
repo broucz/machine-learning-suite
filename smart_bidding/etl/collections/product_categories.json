@@ -1,0 +1,260 @@
+[
+  {
+    "id": 2,
+    "name": "Utilities",
+    "long_name": "Utilities",
+    "parent": 0
+  },
+  {
+    "id": 4,
+    "name": "Browser Extension / Toolbar",
+    "long_name": "Utilities - Browser Extension / Toolbar",
+    "parent": 2
+  },
+  {
+    "id": 6,
+    "name": "Gambling",
+    "long_name": "Gambling",
+    "parent": 0
+  },
+  {
+    "id": 8,
+    "name": "Poker",
+    "long_name": "Gambling - Poker",
+    "parent": 6
+  },
+  {
+    "id": 10,
+    "name": "Casino",
+    "long_name": "Gambling - Casino",
+    "parent": 6
+  },
+  {
+    "id": 12,
+    "name": "Sport Betting",
+    "long_name": "Gambling - Sport Betting",
+    "parent": 6
+  },
+  {
+    "id": 14,
+    "name": "Adult",
+    "long_name": "Adult",
+    "parent": 0
+  },
+  {
+    "id": 16,
+    "name": "Webcams",
+    "long_name": "Adult - Webcams",
+    "parent": 14
+  },
+  {
+    "id": 18,
+    "name": "Paysite / VOD",
+    "long_name": "Adult - Paysite / VOD",
+    "parent": 14
+  },
+  {
+    "id": 20,
+    "name": "Dating",
+    "long_name": "Adult - Dating",
+    "parent": 14
+  },
+  {
+    "id": 26,
+    "name": "Lifestyle",
+    "long_name": "Lifestyle",
+    "parent": 0
+  },
+  {
+    "id": 28,
+    "name": "Dating",
+    "long_name": "Lifestyle - Dating",
+    "parent": 26
+  },
+  {
+    "id": 30,
+    "name": "Men Health",
+    "long_name": "Lifestyle - Men Health",
+    "parent": 26
+  },
+  {
+    "id": 34,
+    "name": "Lottery / Bingo",
+    "long_name": "Gambling - Lottery / Bingo",
+    "parent": 6
+  },
+  {
+    "id": 40,
+    "name": "Male Enhancements",
+    "long_name": "Adult - Male Enhancements",
+    "parent": 14
+  },
+  {
+    "id": 52,
+    "name": "Sex Shop",
+    "long_name": "Adult - Sex Shop",
+    "parent": 14
+  },
+  {
+    "id": 54,
+    "name": "Business",
+    "long_name": "Business",
+    "parent": 0
+  },
+  {
+    "id": 56,
+    "name": "Forex / Binary",
+    "long_name": "Business - Forex / Binary",
+    "parent": 54
+  },
+  {
+    "id": 60,
+    "name": "Generate Income",
+    "long_name": "Business - Generate Income",
+    "parent": 54
+  },
+  {
+    "id": 64,
+    "name": "Movies / Music",
+    "long_name": "Utilities - Movies / Music",
+    "parent": 2
+  },
+  {
+    "id": 68,
+    "name": "AntiVirus",
+    "long_name": "Utilities - AntiVirus",
+    "parent": 2
+  },
+  {
+    "id": 72,
+    "name": "Games",
+    "long_name": "Adult - Games",
+    "parent": 14
+  },
+  {
+    "id": 74,
+    "name": "Shopping",
+    "long_name": "Lifestyle - Shopping",
+    "parent": 26
+  },
+  {
+    "id": 76,
+    "name": "Women Health",
+    "long_name": "Lifestyle - Women Health",
+    "parent": 26
+  },
+  {
+    "id": 78,
+    "name": "General Health and Fitness",
+    "long_name": "Lifestyle - General Health and Fitness",
+    "parent": 26
+  },
+  {
+    "id": 82,
+    "name": "Other",
+    "long_name": "Other",
+    "parent": 0
+  },
+  {
+    "id": 84,
+    "name": "Ad Exchanges",
+    "long_name": "Other - Ad Exchanges",
+    "parent": 82
+  },
+  {
+    "id": 88,
+    "name": "Tube Site / Free Video Site",
+    "long_name": "Adult - Tube Site / Free Video Site",
+    "parent": 14
+  },
+  {
+    "id": 90,
+    "name": "Tutorials",
+    "long_name": "Adult - Tutorials",
+    "parent": 14
+  },
+  {
+    "id": 92,
+    "name": "Sweepstakes",
+    "long_name": "Lifestyle - Sweepstakes",
+    "parent": 26
+  },
+  {
+    "id": 94,
+    "name": "Travel",
+    "long_name": "Lifestyle - Travel",
+    "parent": 26
+  },
+  {
+    "id": 96,
+    "name": "Device Enhancement",
+    "long_name": "Utilities - Device Enhancement",
+    "parent": 2
+  },
+  {
+    "id": 98,
+    "name": "VPN",
+    "long_name": "Utilities - VPN",
+    "parent": 2
+  },
+  {
+    "id": 100,
+    "name": "Blog / News / Viral Content",
+    "long_name": "Lifestyle - Blog / News / Viral Content",
+    "parent": 26
+  },
+  {
+    "id": 102,
+    "name": "Games",
+    "long_name": "Lifestyle - Games",
+    "parent": 26
+  },
+  {
+    "id": 104,
+    "name": "Gambling",
+    "long_name": "Adult - Gambling",
+    "parent": 14
+  },
+  {
+    "id": 108,
+    "name": "Medical",
+    "long_name": "Lifestyle - Medical",
+    "parent": 26
+  },
+  {
+    "id": 110,
+    "name": "CBD",
+    "long_name": "Lifestyle - CBD",
+    "parent": 26
+  },
+  {
+    "id": 112,
+    "name": "Push Notifications",
+    "long_name": "Adult - Push Notifications",
+    "parent": 14
+  },
+  {
+    "id": 114,
+    "name": "Push Notifications",
+    "long_name": "Lifestyle - Push Notifications",
+    "parent": 26
+  },
+  {
+    "id": 115,
+    "name": "Medical",
+    "long_name": "Adult - Medical",
+    "parent": 14
+  },
+  {
+    "id": 117,
+    "name": "Surveys",
+    "long_name": "Adult - Surveys",
+    "parent": 14
+  },
+  {
+    "id": 118,
+    "name": "Humanitarian / Non Profit",
+    "long_name": "Lifestyle - Humanitarian / Non Profit",
+    "parent": 26
+  }
+]

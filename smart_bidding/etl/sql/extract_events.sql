@@ -15,6 +15,7 @@ SELECT
     -- Selecting required fields
     date_time,
     country,
+    idlanguage,
     region_geoname_id,
     city_geoname_id,
     iddevice,
@@ -29,7 +30,6 @@ SELECT
     idadvertiser_ad_type,
     ad_type,
     idproduct_category,
-    ad_format,
     idpublisher,
     idsite,
     idcategory,

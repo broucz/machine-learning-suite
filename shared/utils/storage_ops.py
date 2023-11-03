@@ -71,6 +71,8 @@ class S3Storage(AbstractStorage):
 
         self.bucket_name = bucket_name
 
+        raise NotImplementedError("This feature has not been implemented yet.")
+
     def read_dask_df(self, file_paths: List[str]) -> dd.DataFrame:
         """Read parquet files from S3 into a Dask DataFrame."""
 
